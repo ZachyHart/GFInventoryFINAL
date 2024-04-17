@@ -47,14 +47,14 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
                 <!-- Second sidebar item for Feedback -->
                 <li class="sidebar-item">
                     <?php if(isset($_SESSION['role']) && $_SESSION['role'] != ''){ ?>
-                    <a href="CustomerFeedbacK.php" class="sidebar-link" title="Feedback">
+                    <a href="CustomerFeedbacK.php" class="sidebar-link" title="Inquiries">
                         <i class="lni lni-comments"></i>
-                        <span>Feedback</span>
+                        <span>Inquiries</span>
                     </a>
                     <?php }else{ ?>
                         <a href="" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                             <i class="lni lni-comments"></i>
-                            <span>Feedback</span>
+                            <span>Inquiries</span>
                         </a>
                     <?php } ?>
                 </li>
@@ -72,23 +72,18 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
 
         <div class="main p-3">
             <div class="text-center">
-                <h1 class="inventory-title">Customer Feedback</h1>
+                <h1 class="inventory-title">Customer Inquiries</h1>
                 <div class="feedback-section mt-4">
-                    <h2 class="text-center">We value your thoughts.</h2>
+                    <h2 class="text-center">We highly regard your inquiries.</h2>
                     <p class="text-justify">
-                        At GotFunko Collections, we are committed to providing you with the best experience
-                        when it comes to purchasing our products. Your feedback matters to us, as it helps us
-                        understand your needs better and ensures we continue to offer high-quality products
-                        and exceptional service.
+                    At GotFunko Collections, we are dedicated to enhancing your shopping experience with our products. 
+                    Your inquiries are crucial to us, as they help us better understand your needs and ensure that we continue to deliver high-quality products and exceptional service.
                     </p>
                     <p class="text-justify">
-                        We value your opinions, suggestions, and experiences with our products and services.
-                        Whether you’ve recently made a purchase, interacted with our customer service team,
-                        or simply explored our website, we encourage you to share your thoughts with us.
-                        Your feedback not only helps us improve but also assists fellow Funko Pop!
-                        enthusiasts in making informed decisions.
+                    We highly value your questions, suggestions, and experiences with our products and services. 
+                    Whether you’ve recently made a purchase, interacted with our customer service team, or simply browsed our website, we encourage you to share your insights with us. Your inquiries not only enable us to improve but also assist fellow Funko Pop! enthusiasts in making well-informed decisions.
                     </p>
-                    <a href="CustomerFeedback2.php" class="btn btn-primary btn-feedback">ADD FEEDBACK</a>
+                    <a href="CustomerFeedback2.php" class="btn btn-primary btn-feedback">INQUIRE NOW</a>
                 </div>
             </div>
             <!-- Admin reply -->
@@ -112,7 +107,7 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
                         ?>
                         <div class="card mb-3">
                             <div class="card-header">
-                                Feedback from
+                                Received inquiry from
                                 <?php echo $row['Email']; ?>
                             </div>
                             <div class="card-body">

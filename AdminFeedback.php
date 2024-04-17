@@ -15,7 +15,7 @@ if (isset($_GET['reply'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Feedback</title>
+    <title>Admin Replies</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -47,9 +47,9 @@ if (isset($_GET['reply'])) {
                 </li>
                 <!-- Second sidebar item for Feedback -->
                 <li class="sidebar-item">
-                    <a href="AdminFeedback.php" class="sidebar-link" title="Feedback">
+                    <a href="AdminFeedback.php" class="sidebar-link" title="Replies">
                         <i class="lni lni-comments"></i>
-                        <span>Feedback</span>
+                        <span>Replies</span>
                     </a>
                 </li>
                 <!-- Add more sidebar items here -->
@@ -63,7 +63,7 @@ if (isset($_GET['reply'])) {
 
         <div class="main p-3">
             <div class="text-center">
-                <h1 class="inventory-title">Admin Feedback</h1>
+                <h1 class="inventory-title">Admin Replies</h1>
             </div>
 
             <div class="container">
@@ -86,7 +86,7 @@ if (isset($_GET['reply'])) {
                         ?>
                         <div class="card mb-3">
                             <div class="card-header">
-                                Feedback from
+                                Received inquiry from
                                 <?php echo $row['Email']; ?>
                             </div>
                             <div class="card-body">

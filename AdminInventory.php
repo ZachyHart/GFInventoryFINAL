@@ -80,10 +80,10 @@ if (isset($_GET["editproduct"])) {
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="AdminFeedback.php" class="sidebar-link" data-page="feedback" title="Feedback">
+                    <a href="AdminFeedback.php" class="sidebar-link" data-page="feedback" title="Replies">
                         <!-- temporary since no admi nfeedback yet -->
                         <i class="lni lni-comments"></i>
-                        <span>Feedback</span>
+                        <span>Replies</span>
                     </a>
                 </li>
             </ul>
