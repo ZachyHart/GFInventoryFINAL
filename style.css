@@ -1,0 +1,962 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar {
+    width: 100px;
+    min-width: 80px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.sidebar-logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-nav {
+    padding: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    width: 100%;
+    transition: padding-left 0.3s;
+}
+
+.sidebar-link.active {
+    padding-left: 20px;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid white;
+}
+
+
+.sidebar-item {
+    position: relative;
+    width: 100%;
+}
+
+/*.sidebar-item:first-child .sidebar-link {
+    margin-top: 40px; 
+)*/
+
+
+#sidebar.expand a.sidebar-link {
+    justify-content: center;
+    padding-left: 20px;
+    flex-direction: row;
+    text-align: left;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+
+.product-img-custom {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+
+.text-category {
+    font-weight: 900;
+    font-weight: bold;
+}
+
+.sidebar-link.active,
+.sidebar-link.active:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.btn-custom-position {
+    display: block;
+    margin: 3rem auto;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+
+.btn-custom-position:hover {
+    background-color: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.btn-edit, .btn-search, .btn-search1 {
+    background-color: black!important;
+    border-color: black!important;
+    color: white !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+
+.btn-save-product {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: Montserrat;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+
+.btn-save-product:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff
+}
+
+
+.btn-save-product:active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.inventory-title {
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 40px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    width: auto;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+/* Customer feedback form */
+.feedback-section {
+    max-width: 800px;
+    margin: 50px auto;
+    /* Added margin-top */
+}
+
+.feedback-section h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.btn-feedback {
+    display: block;
+    margin: 3rem auto;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    max-width: 200px;
+    width: 100%;
+
+}
+
+.btn-feedback:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.feedback-section {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar {
+    width: 100px;
+    min-width: 80px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.sidebar-logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-nav {
+    padding: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    width: 100%;
+    transition: padding-left 0.3s;
+}
+
+.sidebar-link.active {
+    padding-left: 20px;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid white;
+}
+
+
+.sidebar-item {
+    position: relative;
+    width: 100%;
+}
+
+/*.sidebar-item:first-child .sidebar-link {
+    margin-top: 40px; 
+)*/
+
+
+#sidebar.expand a.sidebar-link {
+    justify-content: center;
+    padding-left: 20px;
+    flex-direction: row;
+    text-align: left;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+
+.product-img-custom {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+
+.text-category {
+    font-weight: 900;
+    font-weight: bold;
+}
+
+.sidebar-link.active,
+.sidebar-link.active:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.btn-custom-position {
+    display: block;
+    margin: 3rem auto;
+    background-color: #333 !important;
+    border-color: #333 !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+
+.btn-custom-position:hover {
+    background-color: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.btn-edit {
+    background-color: #333 !important;
+    border-color: #333 !important;
+    color: white !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100px;
+}
+
+
+.btn-save-product {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: Montserrat;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+
+.btn-save-product:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff
+}
+
+
+.btn-save-product:active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.inventory-title {
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 40px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    width: auto;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+/* Customer feedback form */
+.feedback-section {
+    max-width: 800px;
+    margin: 50px auto;
+    /* Added margin-top */
+}
+
+.feedback-section h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.btn-feedback {
+    display: block;
+    margin: 3rem auto;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    max-width: 200px;
+    width: 100%;
+
+}
+
+.btn-feedback:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.feedback-section {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.modal-header h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product_card {
+    width: 250px; 
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.product_image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    
+    margin-bottom: 1rem;
+}
+
+.price_stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.price_text {
+    font-size: 0.8rem;
+}
+
+.stock_text {
+    font-size: 0.8rem;
+}
+
+
+.chat_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.customer_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.admin_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chat_bubble {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.customer_bubble {
+    background-color: #f1f0f0;
+    border: 1px solid #e0e0e0;
+}
+
+.admin_bubble {
+    background-color: #f1f0f0;
+    border: 1px solid #e0e0e0;
+}
+
+
+.chat_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.customer_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.admin_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chat_bubble {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.customer_bubble {
+    background-color: #2268ff;
+    border: 1px solid #e0e0e0;
+}
+
+.admin_bubble {
+    background-color: #dbdbdb;
+    border: 1px solid #e0e0e0;
+}
+
+.product-details {
+    display: block; 
+}
+
+.product-category {
+    display: block; 
+    font-size: 16px; 
+    margin-bottom: 0; 
+}
+
+.card-title {
+    font-weight: bold; 
+    margin-top: 0; 
+    margin-bottom: 2rem; 
+    padding-top: 0; 
+    font-size: 16px;
+}
+
+.price_stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0; 
+}
+
+.product-category, .card-title, .stock_text, .card-text {
+    text-transform: uppercase;
+   
+    
+}
+
+/* Base button style */
+.btn-edit, .btn-save-product, .btn-search, .btn-search1, .btn-custom-position, .btn-feedback, .btn-danger, .btn-primary  {
+    background-color: black !important;
+    border-color: black !important;
+    color: white !important;
+    font-family: Montserrat !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    font-size: 14px !important;
+}
+
+/* Hover state for all buttons */
+.btn-edit:hover, .btn-save-product:hover, .btn-search:hover, .btn-search1:hover, .btn-custom-position:hover, .btn-feedback:hover, .btn-danger:hover, .btn-primary:hover {
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
+
+
+.search-input {
+    border: 1px solid black; 
+    outline: 1px solid black; 
+}
+
+.btn-search, .btn-search1 {
+    width: 100px; 
+    height: 38px; 
+    padding: 0.375rem 0.9rem;
+   
+}
+
+#forgot_password:hover {
+    text-decoration: underline;
+}
+
+.create-account-link:hover {
+    text-decoration: underline;
+}
+
+ .btn-search1 {
+    margin-top: -8px; 
+}
+
+/* responsiveness of customer side*/
+
+
+.inventory-title {
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 24px; 
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    text-align: center; 
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+    .inventory-title {
+        font-size: 32px; /
+    }
+}
+
+/* Media query for desktops */
+@media (min-width: 992px) {
+    .inventory-title {
+        font-size: 40px; /* Standard size for desktops */
+    }
+}
+
+.card-header {
+    background-color: black; 
+    color: #fff; 
+    font-weight: bold; 
+}
+
+
+.btn-delete {
+    color: rgba(255, 0, 0, 0.568) !important; 
+}
+
+.btn-delete:hover {
+    text-decoration: underline; 
+}
+
+/* responsiveness of admin side*/
+.product_card {
+    width: 100%; /* Make the width responsive */
+    max-width: 250px; /* Limit maximum width */
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+} 
+
+.product_image {
+    width: 100%; /* Ensure image takes full width of the container */
+    height: auto; /* Make height auto to maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 10px;
+}
+
+/* Adjusting text and layout for smaller screens */
+@media (max-width: 768px) {
+    .product_card {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    }
+
+    .card-title, .product-category, .price_stock, .card-text {
+        text-align: center; /* Center-align text for better readability on small screens */
+    }
+
+    .product_image {
+        max-width: 180px; /* Smaller images on smaller screens */
+        height: 180px; /* Fixed height for consistency */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+/* Adjustments for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .product_card {
+        max-width: 200px; /* Slightly larger card size for tablets */
+    }
+
+    .product_image {
+        max-width: 200px;
+        height: 200px; /* Larger image size for tablets */
+    }
+}
+
+/* Larger desktops */
+@media (min-width: 992px) {
+    .product_card {
+        max-width: 250px; /* Standard card size for desktops */
+    }
+
+    .product_image {
+        max-width: 250px;
+        height: 250px; /* Largest fixed size for desktop views */
+    }
+}
+
+.btn-edit, .btn-delete {
+    padding: 0.375rem 0.75rem; /* Adjust padding for better touch targets */
+    font-size: 16px; /* Adjust font size for better visibility */
+    margin-top: 0.5rem; /* Add a little top margin for spacing between buttons and text */
+}
+
+/* Increase button size and spacing on smaller screens */
+@media (max-width: 768px) {
+    .btn-edit, .btn-delete {
+        width: 100%; /* Full width for easier access on mobile */
+        padding: 0.5rem; /* Larger padding for better touch targets */
+        margin-top: 0.5rem; /* Ensure space between buttons */
+        margin-bottom: 0.5rem; /* Space below each button */
+    }
+
+    .btn-edit {
+        margin-right: 0; /* Remove right margin if any */
+    }
+
+    .d-flex {
+        flex-direction: column; /* Stack buttons vertically on smaller devices */
+    }
+}
+
+/* Adjustments for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .btn-edit, .btn-delete {
+        padding: 0.375rem 1rem; /* Slightly larger padding */
+    }
+}
+
+/* Adjustments for desktops */
+@media (min-width: 992px) {
+    .btn-edit, .btn-delete {
+        padding: 0.375rem 1.5rem; /* Comfortable padding for desktop */
+    }
+}
+
+/* Adjustments for mobile phones */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Changes layout to vertical on small devices */
+        border-radius: 10px;
+    }
+
+    .col-md-3, .col-lg-2 {
+        max-width: 100%; /* Allows the image column to take full width */
+        flex: 0 0 100%; /* Adjusts the flex basis to occupy the full width */
+    }
+
+    .product-img-custom {
+        width: 100%; /* Makes the image full width */
+        max-width: 100%; /* Ensures the image does not exceed the card width */
+        height: auto; /* Maintains the aspect ratio */
+        margin-bottom: 1rem; /* Adds some space below the image */
+        border-radius: 10px;
+    }
+
+    .col-md-9, .col-lg-10 {
+        max-width: 100%; /* Allows the content column to take full width */
+        flex: 0 0 100%; /* Adjusts the flex basis to occupy the full width */
+    }
+
+    .search-input {
+        margin-bottom: 1rem; /* Increases the bottom margin for extra space between the input and button */
+    }
+}
+
+/* Adjusting the product image layout and alignment for smaller screens */
+@media (max-width: 768px) {
+    .product_image {
+        width: 100%;  /* Ensures the image takes the full width of its container */
+        height: auto; /* Maintains the aspect ratio of the image */
+        object-fit: cover; /* Ensures the image covers the area appropriately */
+        margin: 0 auto; /* Centers the image horizontally within its container */
+        display: block; /* Ensures the image is treated as a block-level element */
+    }
+}
+
+
