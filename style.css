@@ -36,20 +36,9 @@ body {
     background-color: #fafbfe;
 }
 
-#sidebar {
-    width: 100px;
-    min-width: 80px;
-    z-index: 1000;
-    transition: all .25s ease-in-out;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-}
 
-#sidebar.expand {
-    width: 260px;
-    min-width: 260px;
-}
+
+
 
 .toggle-btn {
     background-color: transparent;
@@ -329,20 +318,6 @@ body {
     background-color: #fafbfe;
 }
 
-#sidebar {
-    width: 100px;
-    min-width: 80px;
-    z-index: 1000;
-    transition: all .25s ease-in-out;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-}
-
-#sidebar.expand {
-    width: 260px;
-    min-width: 260px;
-}
 
 .toggle-btn {
     background-color: transparent;
@@ -958,5 +933,71 @@ body {
         display: block; /* Ensures the image is treated as a block-level element */
     }
 }
+
+/* edited sidebar based on revisions*/
+#sidebar {
+    width: 80px;  /* Initial width */
+    min-width: 80px;
+    height: 100vh;  /* Make sidebar full height */
+    position: fixed;  /* Fix position to the left */
+    top: 0;  /* Start from top */
+    left: 0;  /* Align to the left side */
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Expanded sidebar for wider screens */
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+/* Collapsed sidebar for smaller screens */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 80px;  /* Smaller width for mobile devices */
+    }
+
+    #sidebar.expand {
+        width: 200px;  /* Slightly larger when expanded on small screens */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;  /* Ensure toggle button is visible on small screens */
+    }
+
+    #sidebar.expand a.sidebar-link {
+        flex-direction: column;  /* Stack link text below icons */
+        align-items: center;  /* Center-align items */
+    }
+}
+
+/* Ensure main content is pushed to the right to avoid overlap with sidebar */
+.main {
+    margin-left: 100px;  /* Initial margin to offset for sidebar */
+    transition: margin-left .25s ease-in-out;
+}
+
+#sidebar.expand ~ .main {
+    margin-left: 260px;  /* Larger margin when sidebar is expanded */
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-left: 80px;  /* Smaller margin for small screens */
+    }
+
+    #sidebar.expand ~ .main {
+        margin-left: 200px;  /* Adjust margin when sidebar expands on small screens */
+    }
+}
+
+
 
 
