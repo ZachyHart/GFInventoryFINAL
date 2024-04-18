@@ -935,7 +935,7 @@ body {
 /* edited sidebar based on revisions*/
 #sidebar {
     width: 80px;  /* Initial width */
-    min-width: 80px;
+    min-width: 60px;
     height: 100vh;  /* Make sidebar full height */
     position: fixed;  /* Fix position to the left */
     top: 0;  /* Start from top */
@@ -999,7 +999,7 @@ body {
 /* Additional styling for sidebar links to ensure space between icon and text */
 .sidebar-link span {
     display: block;  /* Ensures the text goes to a new line, effectively using <br> */
-    margin-top: -5px; /* Adjust this value as needed to increase/decrease space */
+    margin-top: -5px; 
 }
 
 
