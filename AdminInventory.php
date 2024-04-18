@@ -76,14 +76,14 @@ if (isset($_GET["editproduct"])) {
                 <li class="sidebar-item">
                     <a href="AdminInventory.php" class="sidebar-link" data-page="products" title="Our Products">
                         <i class="lni lni-cart"></i>
-                        <span>Our Products</span>
+                        <span><br>Our Products</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="AdminFeedback.php" class="sidebar-link" data-page="feedback" title="Replies">
                         <!-- temporary since no admi nfeedback yet -->
                         <i class="lni lni-comments"></i>
-                        <span>Replies</span>
+                        <span><br>Replies</span>
                     </a>
                 </li>
             </ul>

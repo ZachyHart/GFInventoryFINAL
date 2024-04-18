@@ -49,7 +49,7 @@ if (isset($_GET['reply'])) {
                 <li class="sidebar-item">
                     <a href="AdminFeedback.php" class="sidebar-link" title="Replies">
                         <i class="lni lni-comments"></i>
-                        <span>Replies</span>
+                        <span><br>Replies</span>
                     </a>
                 </li>
                 <!-- Add more sidebar items here -->

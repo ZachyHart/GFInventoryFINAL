@@ -88,7 +88,7 @@ body {
 }
 
 .sidebar-link.active {
-    padding-left: 20px;
+    border-left: 3px solid white;
 }
 
 .sidebar-link i {
@@ -113,7 +113,6 @@ body {
 
 #sidebar.expand a.sidebar-link {
     justify-content: center;
-    padding-left: 20px;
     flex-direction: row;
     text-align: left;
 }
@@ -367,7 +366,7 @@ body {
 }
 
 .sidebar-link.active {
-    padding-left: 20px;
+    border-left: 3px solid white;
 }
 
 .sidebar-link i {
@@ -392,7 +391,6 @@ body {
 
 #sidebar.expand a.sidebar-link {
     justify-content: center;
-    padding-left: 20px;
     flex-direction: row;
     text-align: left;
 }
@@ -997,6 +995,15 @@ body {
         margin-left: 200px;  /* Adjust margin when sidebar expands on small screens */
     }
 }
+
+/* Additional styling for sidebar links to ensure space between icon and text */
+.sidebar-link span {
+    display: block;  /* Ensures the text goes to a new line, effectively using <br> */
+    margin-top: -5px; /* Adjust this value as needed to increase/decrease space */
+}
+
+
+
 
 
 

@@ -34,7 +34,7 @@
                 <li class="sidebar-item">
                     <a href="CustomerFeedback.php" class="sidebar-link" title="Feedback">
                         <i class="lni lni-comments"></i>
-                        <span>Feedback</span>
+                        <span><br>Inquiries</span>
                     </a>
                 </li>
                 <!-- Add more sidebar items here -->

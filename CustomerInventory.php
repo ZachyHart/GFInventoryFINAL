@@ -51,12 +51,12 @@ include_once './helpers/session_helper.php';
                     <?php if(isset($_SESSION['role']) && $_SESSION['role'] != ''){ ?>
                     <a href="CustomerFeedbacK.php" class="sidebar-link" title="Inquiries">
                         <i class="lni lni-comments"></i>
-                        <span>Inquiries</span>
+                        <span><br>Inquiries</span>
                     </a>
                     <?php }else{ ?>
                         <a href="" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                             <i class="lni lni-comments"></i>
-                            <span>Inquiries</span>
+                            <span><br>Inquiries</span>
                         </a>
                     <?php } ?>
                 </li>
