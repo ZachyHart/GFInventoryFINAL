@@ -163,10 +163,10 @@ if (isset($_GET["editproduct"])) {
                                                 <div class="d-flex gap-3">
                                                     <button class="btn btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#editProductModal" data-product-name="<?php echo $product_name; ?>" data-product-id="<?php echo $product_id; ?>" data-product-category="<?php echo $product_category; ?>" data-price="<?php echo $price; ?>" data-stock="<?php echo $stock;
                                                                                                                                                                                                                                                                                                                                                                 ?>">
-                                                        Edit
+                                                        EDIT
                                                     </button>
                                                     <button class="btn btn-delete" type="button" data-bs-toggle="modal" data-product-id="<?php echo $product_id; ?>" data-bs-target=" #deleteProductModal">
-                                                        Delete
+                                                        DELETE
                                                     </button>
                                                 </div>
                                             </div>

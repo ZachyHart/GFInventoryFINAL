@@ -718,6 +718,22 @@ body {
     font-size: 14px !important;
 }
 
+.btn-delete {
+    background-color: #dc3545; /* Bootstrap's default red */
+    border-color: #dc3545;
+    color: white !important;
+    font-family: Montserrat !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    font-size: 14px !important;
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker shade of red for hover state */
+    border-color: #bd2130;
+}
+
+
 /* Hover state for all buttons */
 .btn-edit:hover, .btn-save-product:hover, .btn-search:hover, .btn-search1:hover, .btn-custom-position:hover, .btn-feedback:hover, .btn-danger:hover, .btn-primary:hover {
     background-color: #333 !important;
@@ -786,13 +802,6 @@ body {
 }
 
 
-.btn-delete {
-    color: rgba(255, 0, 0, 0.568) !important; 
-}
-
-.btn-delete:hover {
-    text-decoration: underline; 
-}
 
 /* responsiveness of admin side*/
 .product_card {
