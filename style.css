@@ -1026,6 +1026,28 @@ body, html {
 
 
 
+.pagination a:hover {
+   text-decoration: underline;
+   
+}
+
+/* Responsive adjustments for pagination on smaller screens */
+@media (max-width: 768px) {
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .pagination a {
+        padding: 8px 12px; /* Larger padding for easier tapping */
+        margin: 2px; /* Reduced margin to fit more items */
+        font-size: 12px; /* Slightly smaller text to fit better */
+        text-align: center;
+    }
+}
+
+
 
 
 
