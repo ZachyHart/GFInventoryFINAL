@@ -20,9 +20,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
 
 .wrapper {
     display: flex;
@@ -301,9 +298,7 @@ h1 {
     font-size: 1.5rem;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
+
 
 .wrapper {
     display: flex;
@@ -778,8 +773,14 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: black;
-    text-align: center; 
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
 }
+
 
 /* Media query for tablets */
 @media (min-width: 768px) {
@@ -1011,6 +1012,23 @@ body {
     display: block;  /* Ensures the text goes to a new line, effectively using <br> */
     margin-top: -5px; 
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('img/FunkoBgBlur.jpeg'); /* Adds the background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+}
+body, html {
+    height: 100%; /* Ensure minimum height for the background image */
+    margin: 0; /* Reset default margin */
+}
+
+.wrapper, .main {
+    background: none; /* Remove any background color that might be set */
+}
+
 
 
 
