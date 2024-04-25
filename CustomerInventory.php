@@ -112,10 +112,14 @@ include_once './helpers/session_helper.php';
             <span class="product-category"><?php echo $row['product_category']; ?></span>
             <h5 class="card-title"><?php echo $row['product_name']; ?></h5>
         </div>
-        <div class="price_stock">
-            <h1 class="price_text">₱ <?php echo $row['price']; ?></h1>
-            <h1 class="stock_text">In stock x <?php echo $row['stock']; ?></h1>
-        </div>
+        <div class="price_text">
+    ₱ <?php echo $row['price']; ?>
+</div>
+<div class="stock_text">
+    <h1><?php echo $row['stock'] > 0 ? 'Available' : 'Out of Stock'; ?></h1>
+</div>
+
+
         
     </div>
 </div> 
