@@ -104,7 +104,6 @@ include_once './helpers/session_helper.php';
                             <div class="col-12">
                                 <img src="img/products/<?php echo $row['product_image']; ?>"
                                     class="card-img-top product_image" alt="<?php echo $row['product_name']; ?>">
-                                    
                             </div>
                             <div class="col-12">
                             <div class="card-body">

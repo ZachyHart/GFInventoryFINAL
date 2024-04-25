@@ -822,7 +822,19 @@ h1 {
 
 
 }
-
+.product_image img.Sirv.image-hover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.product_image:hover img.Sirv.image-hover {
+    opacity: 1;
+}
 
 /* Adjusting text and layout for smaller screens */
 @media (max-width: 768px) {
