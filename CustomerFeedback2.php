@@ -1,3 +1,22 @@
+<?php
+ use PHPMailer\PHPMailer\PHPMailer;
+ require_once 'PHPMailer/src/PHPMailer.php';
+require_once 'PHPMailer/src/Exception.php';
+require_once 'PHPMailer/src/SMTP.php';
+
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'tls'; // If using tls
+$mail->Port = 587;
+$mail->Username = 'lgaforpeople@gmail.com'; // Your Gmail address
+$mail->Password = 'idewfsnhmfrzwzsx'; // Your Gmail password
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,10 +76,7 @@
                          <i class="lni lni-users"></i> 
                         <span><br>About Us</span>
                     </a>
-                    <li class="sidebar-item">
-            <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-                <span><br>Facebook</span>
+                
         </aside>
 
         <div class="main p-3">

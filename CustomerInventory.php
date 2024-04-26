@@ -35,8 +35,7 @@ include_once './helpers/session_helper.php';
 
 <body>
     <div class="wrapper">
-        <aside id="sidebar">
-            
+    <aside id="sidebar">
             <div class="sidebar-logo">
                 <img src="img/CircularLogo.jpg" alt="Logo"
                     style="width: 100%; max-width: 120px; display: block; margin: 0 auto;">
@@ -48,25 +47,13 @@ include_once './helpers/session_helper.php';
                         <span><br>Our Products</span>
                     </a>
                 </li>
-                <!-- Second sidebar item for Feedback -->
+                
                 <li class="sidebar-item">
-                    <?php if(isset($_SESSION['role']) && $_SESSION['role'] != ''){ ?>
-                    <a href="CustomerFeedbacK.php" class="sidebar-link" title="Inquiries">
+                    <a href="CustomerFeedback.php" class="sidebar-link" title="Feedback">
                         <i class="lni lni-comments"></i>
                         <span><br>Inquiries</span>
                     </a>
-                    <?php }else{ ?>
-                        <a href="" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            <i class="lni lni-comments"></i>
-                            <span><br>Inquiries</span>
-                        </a>
-                    <?php } ?>
                 </li>
-                <li class="sidebar-item">
-                    <a href="AboutUs.php" class="sidebar-link" title="About Us">
-                         <i class="lni lni-users"></i> 
-                        <span><br>About Us</span>
-                    </a>
                 <li class="sidebar-item">
             <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
                 <i class="fa-brands fa-facebook"></i>
@@ -74,7 +61,17 @@ include_once './helpers/session_helper.php';
             </a>
         </li>
             </ul>
-           
+            <div class="sidebar-footer">
+                <a href="CustomerInventory.php" class="sidebar-link" title="Logout">
+                    <i class="lni lni-exit"></i>
+                </a>
+            </div>
+            <li class="sidebar-item">
+                    <a href="AboutUs.php" class="sidebar-link" title="About Us">
+                         <i class="lni lni-users"></i> 
+                        <span><br>About Us</span>
+                    </a>
+                
         </aside>
 
         <div class="main p-3">

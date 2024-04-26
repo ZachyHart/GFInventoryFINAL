@@ -195,7 +195,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`usersId`, `usersName`, `usersEmail`, `usersUid`, `usersPwd`, `confirmToken`) VALUES
-(22, 'west', 'wangwestley@gmail.com', 'west', '$2y$10$L4eH.DiAVxgsjEdKBbPfrOSX0nBZJy2y..c0aOO1nwlSq0go0ypzO', 'confirmed');
+(22, 'imran', 'ijason2002@gmail.com', 'imran', '$2y$10$L4eH.DiAVxgsjEdKBbPfrOSX0nBZJy2y..c0aOO1nwlSq0go0ypzO', 'confirmed');
 
 --
 -- 转储表的索引
