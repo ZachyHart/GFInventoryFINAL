@@ -60,12 +60,22 @@
             </ul>
            
         </aside>
-
+        <section class="about-us">
+            <div class="about">
+                <img src="funkobrian.jpg" class="pic" />
+                <div class="textaboutus">
+                    <h2>About Us</h2>
+                    <h5>GotFunkoCollections by Brian Pope Dela Rosa</h5>
+                    <p>At Got Funko Collection, our goal is to become the premier destination for Funko Pop enthusiasts across the Philippines. We are committed to providing an expansive and diverse selection of Funko Pop figurines, ranging from the latest releases to rare and exclusive collectibles. </p>
+                </div>
+            </div>
+        </section>
        
 
 
         
     </div>
+
 </div> 
                                        
             <!-- Login modal -->
@@ -189,7 +199,7 @@
                     </div>
                 </div>
             </div>
-
+                        
             
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
