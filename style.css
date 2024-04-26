@@ -1141,6 +1141,8 @@ body, html {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 span {
   color: #ffffff;
@@ -1150,6 +1152,8 @@ span {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 1px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .data {
   margin-top: 30px;
