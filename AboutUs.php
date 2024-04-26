@@ -57,6 +57,11 @@
                          <i class="lni lni-users"></i> 
                         <span><br>About Us</span>
                     </a>
+                <li class="sidebar-item">
+                    <a href="https://www.facebook.com/profile.php?id=100088628276490&sk=about" class="sidebar-link" title="Facebook">
+                         <i class="lni lni-users"></i> 
+                        <span><br>Facebook</span>
+                    </a>
             </ul>
            
         </aside>
