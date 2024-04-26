@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -37,7 +38,12 @@
                         <span><br>Inquiries</span>
                     </a>
                 </li>
-                <!-- Add more sidebar items here -->
+                <li class="sidebar-item">
+            <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+                <span><br>Facebook</span>
+            </a>
+        </li>
             </ul>
             <div class="sidebar-footer">
                 <a href="CustomerInventory.php" class="sidebar-link" title="Logout">

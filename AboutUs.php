@@ -1,11 +1,3 @@
-<?php
-require_once 'helpers/conn_helpers.php';
-include_once './helpers/session_helper.php';
-
-// check if user is logged in, and check if user is an admin
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +16,6 @@ include_once './helpers/session_helper.php';
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="customerlogin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
     <!-- Sweetalerts & Jquery --> 
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -63,109 +53,21 @@ include_once './helpers/session_helper.php';
                     <?php } ?>
                 </li>
                 <li class="sidebar-item">
-            <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-                <span><br>Facebook</span>
-            </a>
-        </li>
+                    <a href="AboutUs.php" class="sidebar-link" title="About Us">
+                         <i class="lni lni-users"></i> 
+                        <span><br>About Us</span>
+                    </a>
             </ul>
            
         </aside>
 
-        <div class="main p-3">
-            <div class="text-center">
-            <h1 class="inventory-title">PRODUCT LIST</h1>
-            </div>
-            <div class="row">
-            <div class="col-md-6 mx-auto">
-            <form method="GET" class="d-flex align-items-center">
-                        <input type="text" class="form-control me-2" name="search" placeholder="Search products..."required>
-                        <button type="submit" class="btn btn-search1">Search</button>
-                    </form>
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 mt-3"> <!-- Updated to show 4 columns on large screens -->
-                <?php
-                $productsPerPage = 20;
-
-                $page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-                $offset = ($page - 1) * $productsPerPage;
-
-                if (isset($_GET['search'])) {
-                    $search = $_GET['search'];
-                    $sql = "SELECT * FROM product_table WHERE product_name LIKE '%$search%' LIMIT $productsPerPage OFFSET $offset";
-                } else {
-                    $sql = "SELECT * FROM product_table LIMIT $productsPerPage OFFSET $offset";
-                }
-                $result = mysqli_query($conn, $sql);
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                <div class="col">
-                    <div class="card product_card">
-                        <div class="row justify-content-start">
-                            
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <img src="img/products/<?php echo $row['product_image']; ?>"
-                                    class="card-img-top product_image" alt="<?php echo $row['product_name']; ?>">
-                            </div>
-                            <div class="col-12">
-                            <div class="card-body">
-        <div class="product-details">
-            <span class="product-category"><?php echo $row['product_category']; ?></span>
-            <h5 class="card-title"><?php echo $row['product_name']; ?></h5>
-        </div>
-        <div class="price_text">
-    ₱ <?php echo $row['price']; ?>
-</div>
-<div class="stock_text">
-    <h1><?php echo $row['stock'] > 0 ? 'Available' : 'Out of Stock'; ?></h1>
-</div>
+       
 
 
         
     </div>
 </div> 
-                                </div>
-                               
-                    </div>
-                </div>
-            
-            <?php
-                    }
-                } else {
-                    echo "0 results";
-                }
-                ?>
-                <!-- Pagination buttons -->
-                <div class="pagination d-flex justify-content-center w-100">
-                    <?php
-                    $sql_totalProducts = "SELECT COUNT(*) FROM product_table";
-                    $result_totalProducts = $conn->query($sql_totalProducts);
-                    $totalProducts = mysqli_fetch_array($result_totalProducts);
-
-                    $totalPages = ceil($totalProducts['COUNT(*)'] / $productsPerPage);
-
-                    if ($page > 1) {
-                        echo '<a href="?page=' . ($page - 1) . '"><i class="lni lni-arrow-left-circle fs-3 px-3 text-dark"></i></a>';
-                    }
-
-                    for ($i = 1; $i <= $totalPages; $i++) {
-                        echo '<a href="?page=' . $i . '" class="px-3 text-dark">' . $i . '</a>';
-                    }
-
-                    if ($page < $totalPages) {
-                        echo '<a href="?page=' . ($page + 1) . '"><i class="lni lni-arrow-right-circle fs-3 px-3 text-dark"></i></a>';
-                    }
-                    ?>
-                </div>
-
-               
-
-
+                                       
             <!-- Login modal -->
             <div class="modal fade" id="loginModal" tabindex="-1"
                 aria-hidden="true">
