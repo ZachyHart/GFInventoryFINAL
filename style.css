@@ -1076,3 +1076,14 @@ body, html {
 
 
 
+.sidebar-nav .fa-facebook {
+    font-size: 1.7rem; /* Adjust the size as needed */
+    color: white; /* Or any color that fits your sidebar theme */
+    transition: color 0.3s; /* For a nice hover effect */
+}
+
+.sidebar-nav .fa-facebook:hover {
+    color: #4267B2; /* Facebook blue for hover state */
+}
+
+

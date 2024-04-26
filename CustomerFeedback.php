@@ -26,7 +26,7 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -58,7 +58,12 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
                         </a>
                     <?php } ?>
                 </li>
-                <!-- Add more sidebar items here -->
+                <li class="sidebar-item">
+            <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+                <span><br>Facebook</span>
+            </a>
+        </li>
             </ul>
             <div class="sidebar-footer">
                 <form action="controllers/Customerusers.php" method="post" id="logout">

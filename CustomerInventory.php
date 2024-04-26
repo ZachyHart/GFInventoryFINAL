@@ -24,6 +24,8 @@ include_once './helpers/session_helper.php';
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="customerlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     <!-- Sweetalerts & Jquery --> 
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -60,7 +62,12 @@ include_once './helpers/session_helper.php';
                         </a>
                     <?php } ?>
                 </li>
-                <!-- Add more sidebar items here -->
+                <li class="sidebar-item">
+            <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+                <span><br>Facebook</span>
+            </a>
+        </li>
             </ul>
            
         </aside>
@@ -156,6 +163,9 @@ include_once './helpers/session_helper.php';
                     }
                     ?>
                 </div>
+
+               
+
 
             <!-- Login modal -->
             <div class="modal fade" id="loginModal" tabindex="-1"
