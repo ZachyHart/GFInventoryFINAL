@@ -1,3 +1,13 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+function isUserLoggedIn() {
+    return isset($_SESSION['role']) && $_SESSION['role'] != '';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,18 +51,18 @@
                 </li>
                 <!-- Second sidebar item for Feedback -->
                 <li class="sidebar-item">
-                    <?php if(isset($_SESSION['role']) && $_SESSION['role'] != ''){ ?>
-                    <a href="CustomerFeedback.php" class="sidebar-link" title="Inquiries">
-                        <i class="lni lni-comments"></i>
-                        <span><br>Inquiries</span>
-                    </a>
-                    <?php }else{ ?>
+                    <?php if (isUserLoggedIn()) { ?>
+                        <a href="CustomerFeedback.php" class="sidebar-link" title="Inquiries">
+                            <i class="lni lni-comments"></i>
+                            <span><br>Inquiries</span>
+                        </a>
+                    <?php } else { ?>
                         <a href="" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                             <i class="lni lni-comments"></i>
                             <span><br>Inquiries</span>
                         </a>
                     <?php } ?>
-                </li>
+                    </li>
                 <li class="sidebar-item">
                     <a href="AboutUs.php" class="sidebar-link" title="About Us">
                          <i class="lni lni-users"></i> 

@@ -96,10 +96,13 @@ include_once './helpers/session_helper.php';
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="CustomerInventory.php" class="sidebar-link" title="Logout">
-                    <i class="lni lni-exit"></i>
-                </a>
-            </div>
+    <form method="post" action="./controllers/CustomerUsers.php">
+        <input type="hidden" name="type" value="logout">
+        <button type="submit" class="sidebar-link" title="Logout" style="background-color: black;">
+            <i class="lni lni-exit"></i>
+        </button>
+    </form>
+</div>
             
         </aside>
 

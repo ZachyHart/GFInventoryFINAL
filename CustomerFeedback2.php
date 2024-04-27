@@ -60,6 +60,12 @@ $mail->Password = 'idewfsnhmfrzwzsx'; // Your Gmail password
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a href="AboutUs.php" class="sidebar-link" title="About Us">
+                         <i class="lni lni-users"></i> 
+                        <span><br>About Us</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
             <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
                 <i class="fa-brands fa-facebook"></i>
                 <span><br>Facebook</span>
@@ -67,15 +73,14 @@ $mail->Password = 'idewfsnhmfrzwzsx'; // Your Gmail password
         </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="CustomerInventory.php" class="sidebar-link" title="Logout">
-                    <i class="lni lni-exit"></i>
-                </a>
-            </div>
-            <li class="sidebar-item">
-                    <a href="AboutUs.php" class="sidebar-link" title="About Us">
-                         <i class="lni lni-users"></i> 
-                        <span><br>About Us</span>
-                    </a>
+    <form method="post" action="./controllers/CustomerUsers.php">
+        <input type="hidden" name="type" value="logout">
+        <button type="submit" class="sidebar-link" title="Logout" style="background-color: black;">
+            <i class="lni lni-exit"></i>
+        </button>
+    </form>
+</div>
+            
                 
         </aside>
 
