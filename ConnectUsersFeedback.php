@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password = 'idewfsnhmfrzwzsx';
 
         $mail->setFrom('lgaforpeople@gmail.com', 'GotfunkoPopCollections'); // Change Your Name to your desired sender name
-        $mail->addAddress('ijason2002@gmail.com', 'Admin'); // Change Admin to the recipient name
+        $mail->addAddress('godwinvictorm19@gmail.com', 'Admin'); // Change Admin to the recipient name
         $mail->Subject = 'New Feedback Submission';
         $mail->isHTML(true); // Set email content type to HTML
 

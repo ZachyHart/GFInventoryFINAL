@@ -1072,12 +1072,37 @@ body, html {
     margin-bottom: 1rem; 
 }
 
+
+/* Adjust the position of .stock_text h1 */
+/* Adjust the position of .stock_text h1 */
 .stock_text h1 {
-    display: block;
-    text-align: center;
+    position: absolute;
+    bottom: 4rem; /* Adjust the distance from the bottom as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     font-size: 20px;
-    
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    border-radius: 5px; /* Add rounded corners */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
 }
+
+/* Green highlight for available products */
+.stock_text h1.available {
+    background-color: #00FF00; /* Green highlight */
+    padding: 0.5rem 1rem; /* Add padding for better appearance */
+}
+
+/* Red highlight for out of stock products */
+.stock_text h1.out-of-stock {
+    background-color: #FF0000; /* Red highlight */
+    padding: 0.5rem 1rem; /* Add padding for better appearance */
+}
+
+
 
 
 
