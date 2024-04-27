@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<<body style="background-image: url('img/whiteBg4.png'); background-size: cover;">
     <div class="wrapper">
         <aside id="sidebar">
             
@@ -42,7 +42,7 @@
                 <!-- Second sidebar item for Feedback -->
                 <li class="sidebar-item">
                     <?php if(isset($_SESSION['role']) && $_SESSION['role'] != ''){ ?>
-                    <a href="CustomerFeedbacK.php" class="sidebar-link" title="Inquiries">
+                    <a href="CustomerFeedback.php" class="sidebar-link" title="Inquiries">
                         <i class="lni lni-comments"></i>
                         <span><br>Inquiries</span>
                     </a>
@@ -68,7 +68,8 @@
             </ul>
            
         </aside>
-        <section class="about-us">
+        <section class="about-us" style="background-image: url('img/whiteBg4.png'); background-size: cover;">>
+
             <div class="about">
                 <img src="funkobrian.jpg" class="pic" />
                 <div class="textaboutus">

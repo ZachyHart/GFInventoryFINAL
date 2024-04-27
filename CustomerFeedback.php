@@ -53,6 +53,12 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
                     </a>
                 </li>
                 <li class="sidebar-item">
+                <a href="AboutUs.php" class="sidebar-link" title="About Us">
+                     <i class="lni lni-users"></i> 
+                    <span><br>About Us</span>
+                </a>
+                </li>
+                <li class="sidebar-item">
             <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
                 <i class="fa-brands fa-facebook"></i>
                 <span><br>Facebook</span>
@@ -64,11 +70,7 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
                     <i class="lni lni-exit"></i>
                 </a>
             </div>
-            <li class="sidebar-item">
-                    <a href="AboutUs.php" class="sidebar-link" title="About Us">
-                         <i class="lni lni-users"></i> 
-                        <span><br>About Us</span>
-                    </a>
+            
                 
         </aside>
         <div class="main">

@@ -70,10 +70,23 @@ include_once './helpers/session_helper.php';
                 </li>
                 
                 <li class="sidebar-item">
-                    <a href="CustomerFeedback.php" class="sidebar-link" title="Feedback">
+                <?php if(isset($_SESSION['role']) && $_SESSION['role'] != ''){ ?>
+                    <a href="CustomerFeedback.php" class="sidebar-link" title="Inquiries">
                         <i class="lni lni-comments"></i>
                         <span><br>Inquiries</span>
                     </a>
+                    <?php }else{ ?>
+                        <a href="" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="lni lni-comments"></i>
+                            <span><br>Inquiries</span>
+                        </a>
+                    <?php } ?>
+                </li>
+                <li class="sidebar-item">
+                <a href="AboutUs.php" class="sidebar-link" title="About Us">
+                     <i class="lni lni-users"></i> 
+                    <span><br>About Us</span>
+                </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="https://www.facebook.com/profile.php?id=100088628276490" class="sidebar-link" target="_blank" title="Facebook">
@@ -87,12 +100,7 @@ include_once './helpers/session_helper.php';
                     <i class="lni lni-exit"></i>
                 </a>
             </div>
-            <li class="sidebar-item">
-                <a href="AboutUs.php" class="sidebar-link" title="About Us">
-                     <i class="lni lni-users"></i> 
-                    <span><br>About Us</span>
-                </a>
-            </li>
+            
         </aside>
 
         <div class="main p-3">
@@ -177,6 +185,128 @@ include_once './helpers/session_helper.php';
             </div>
         </div>
     </div>
+    <!-- Login modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div id="form_header_container" class="text-center">
+                                <div id="logo_container">
+                                    <img id="logo" src="img/CircularLogo.jpg" alt="Logo" class="img-fluid">
+                                </div>
+                                <h1 id="form_header" class="text-center mt-3">Customer Login</h1>
+                            </div>
+
+                            <form class="form" method="post" name="login" action="./controllers/CustomerUsers.php">
+                                <div id="form_content_container" class="bg-white p-4 rounded">
+                                    <div id="form_content_inner_container">
+                                        <input type="hidden" name="type" value="login_user">
+                                        <input type="text" class="form-control mb-3" name="name/email"
+                                            placeholder="Username/Email..." autofocus="true" />
+                                        <input type="password" class="form-control mb-3" name="usersPwd"
+                                            placeholder="Password..." />
+                                        <a href="./Customerreset-password.php" id="forgot_password"
+                                        data-bs-toggle="modal" data-bs-target="#forgotPassModal" div class="form-sub-msg">Forgot Password?</a>
+
+                                        <div id="button_container" class="text-center mt-3" name="submit">
+                                            <button type="submit" button class="btn btn-primary">LOG IN</button>
+                                        </div>
+                                    </div>
+
+                                    <p id="create_account_text" class="text-center mt-3">Don't have an account? <br> Create a new
+                                        one <a href="" class="create-account-link" data-bs-toggle="modal" data-bs-target="#signupModal"> here</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signup modal -->
+            <div class="modal fade" id="signupModal" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div id="form_header_container" class="text-center registration-page">
+                                <div id="logo_container">
+                                    <img id="logo" src="img/CircularLogo.jpg" alt="Logo" class="img-fluid">
+                                </div>
+                                <h2 id="registration_form_header" class="mt-3">Register</h2>
+                            </div>
+                
+                            <form class="form" id="form" method="post" action="./controllers/CustomerUsers.php" id="registrationForm">
+                                <div id="form_content_container" class="bg-white p-4 rounded">
+                                    <div id="form_content_inner_container">
+                                        <input type="hidden" name="type" value="register">
+
+                                        <input type="text" class="form-control mb-3" name="usersName" placeholder="Full name" required />
+
+                                        <input type="text" class="form-control mb-3" name="usersEmail" placeholder="Email">
+
+                                        <input type="text" class="form-control mb-3" name="usersUid" placeholder="Username">
+
+                                        <input type="password" class="form-control mb-3" name="usersPwd" placeholder="Password">
+
+                                        <input type="password" class="form-control mb-3" name="pwdRepeat" placeholder="Repeat password">
+
+                                        <div id="button_container" class="text-center registration-page">
+                                            <button type="submit" id="showConfirmationModal" class="btn btn-primary text-center btn-submit" style="background-color: black; color: white;">SIGN UP</button>
+                                        </div>
+                                        
+                                        <p id="create_account_text" class="text-center mt-3">Already have an account? <br> Click here to <a href="" class="create-account-link" data-bs-toggle="modal" data-bs-target="#loginModal"> login</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forgot Password modal -->
+            <div class="modal fade" id="forgotPassModal" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                           
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                        <div id="form_header_container" class="text-center">
+                            <div id="logo_container">
+                                <img id="logo" src="img/CircularLogo.jpg" alt="Logo" class="img-fluid">
+                            </div>
+                            <h1 id="form_header" class="text-center mt-3">Reset Password</h1>
+                            </div>
+
+                            <form method="post" action="./controllers/CustomerResetPasswords.php">
+                                <div id="form_content_container" class="bg-white p-4 rounded">
+                                <div id="form_content_inner_container">
+                                <input type="hidden" name="type" value="send" />
+                                <input type="text" class="form-control mb-3" name="usersEmail" placeholder="Email" autofocus="true"/>
+                                <br><br>
+                                <div id="button_container" class="text-center mt-3" name="submit">
+                                                    <button type="submit" button class="btn btn-primary">RECEIVE EMAIL</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
 
     <!-- Your existing modals and scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

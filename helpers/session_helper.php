@@ -2,6 +2,9 @@
 if (!isset($_SESSION)) {
     session_start();
 }
+function isUserLoggedIn() {
+    return isset($_SESSION['role']) && $_SESSION['role'] != '';
+}
 
 function flash($name = '', $message = '', $class = 'form-message form-message-red')
 {
